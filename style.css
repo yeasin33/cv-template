@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color:var(--clr-white-smoke);
+}
+:root{
+    --clr-white:#ffffff;
+    --clr-white-smoke:#f5f5f5;
+    --clr-gray:#696969;
+}
+/* in web page every ul li list style type */
+ul{
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    list-style-type: none;
+}
+/* person image area  style start here */
+.container-skill{
+    margin: 0px 1rem 0px 1rem;
+}
+.container-skill > .container-person > .person-image img{
+    max-width: 100%;
+}
+.container-person{
+    position: relative;
+}
+.container-skill > .container-person > .person-name{
+    position: absolute;
+    top: 85%;
+    left: 30px;
+    color: var(--clr-white);
+    font: normal smaller bold 1.4rem 'Courier New', Courier, monospace;
+}
+.person-contact-address > ul li{
+    color:#696969;
+    line-height:1.3rem;
+}
+.person-contact-address ul li::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    margin: 0.5rem;
+    color: 	#000080;
+}
+.person-contact-address ul li:first-child::before{
+    content: '\f0b1';
+}
+.person-contact-address ul li:nth-child(2)::before{
+    content: '\f015';
+}
+.person-contact-address ul li:nth-child(3)::before{
+    content: '\f0e0';
+}
+.person-contact-address ul li:nth-child(4)::before{
+    content: '\f879';
+}
