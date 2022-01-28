@@ -1,18 +1,16 @@
-*{
+    *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-body{
-    background-color:var(--clr-white-smoke);
-}
+
 :root{
     --clr-white:#ffffff;
     --clr-white-smoke:#f5f5f5;
     --clr-gray:#696969;
     --clr-navy:#000080;
-    --margin-05rem:0.5rem;
+    --margin-05rem:1rem;
 }
 /* in web page every ul li list style type */
 ul{
@@ -22,17 +20,20 @@ ul{
 ul li{
     list-style-type: none;
 }
+/* here set margin left and right all container 1rem */
+.container-skill , .work-experience-area , .container-education{
+    margin: 0px 1rem 1rem 1rem;
+    background: var(--clr-white-smoke);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
 /* person image area  style start here */
-.container-skill{
-    margin: 0px 1rem 0px 1rem;
+.container-skill > .container-person > .person-image{
+    position: relative;
 }
 .container-skill > .container-person > .person-image img{
     max-width: 100%;
 }
-.container-person{
-    position: relative;
-}
-.container-skill > .container-person > .person-name{
+.container-skill > .container-person > .person-image h1{
     position: absolute;
     top: 85%;
     left: 30px;
@@ -72,7 +73,6 @@ ul li{
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
     color:var(--clr-navy);
-    font-size: 1rem;
     margin: var(--margin-05rem);
 }
 .skill-area > h2{
@@ -82,7 +82,7 @@ ul li{
 }
 /* create skill area progress bar */
 .skill-area ul li{
-    margin: 50px 0px 50px 0.5rem;
+    margin: 50px 5px 50px 0.5rem;
     position: relative;
     color: var(--clr-gray);
     font-size: 1rem;
@@ -95,7 +95,7 @@ ul li{
     position: absolute;
     top: calc(100% + 15px);
     width: 100%;
-    height: 20px;
+    height: 15px;
     background-color: var(--clr-white);
     border-radius: 5px;
 }
@@ -104,7 +104,7 @@ ul li{
     position: absolute;
     top: calc(100% + 15px);
     left: 0;
-    height: 20px;
+    height: 15px;
     background-color: var(--clr-navy);
     border-radius: 5px;
     color: var(--clr-white);
@@ -145,7 +145,7 @@ ul li{
     color: var(--clr-navy);
 }
 .language-area ul li{
-    margin: 50px 0px 0px 0.5rem;
+    margin: 50px 5px 50px 0.5rem;
     position: relative;
     color: var(--clr-gray);
     font-size: 1rem;
@@ -189,3 +189,124 @@ ul li{
     content: '50%';
     width: 50%;
 } 
+/* work experience area style start here */
+.work-experience-area h1{
+    font: normal medium 1.3rem  Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--clr-gray);
+    padding-left: var(--margin-05rem);
+    padding-top: 1rem;
+}
+.work-experience-area > h1::before{
+    content: '\f0f2';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    color: var(--clr-navy);
+    padding-right: 1rem;
+}
+.work-experience-area > .front-end-area , .web-developer-area {
+    padding: var(--margin-05rem);
+}
+.work-experience-area > .front-end-area h2{
+    font-size: 1rem;
+}
+.work-experience-area > .front-end-area > p:first-of-type{
+    font-size: 0.9rem;
+    margin: 0.4rem 0rem;
+    color:var(--clr-navy);
+}
+.work-experience-area > .front-end-area > p span{
+    padding: 0.3rem 0.3rem;
+    margin-left: 0.3rem;
+    background-color: var(--clr-navy);
+    border-radius: 5px;
+    color: var(--clr-white);
+}
+.work-experience-area > .web-developer-area h3{
+    font-size: 1rem;
+}
+.work-experience-area > .web-developer-area p:first-of-type{
+    font-size: 0.9rem;
+    margin: 0.4rem 0rem;
+    color: var(--clr-navy);
+}
+/* work-experience-area end here */
+/* education area start here */
+.container-education{
+    line-height: 2.5rem;
+}
+.container-education > h1{
+    font: normal  medium 1.3rem  Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--clr-gray);
+    padding-left: var(--margin-05rem);
+    padding-top: 1rem;
+}
+.container-education > h1::before{
+    content: '\f0a3';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    color: var(--clr-navy);
+    margin-right: 1rem;
+
+}
+.container-education > div{
+    padding-left: var(--margin-05rem);
+}
+.container-education > div:first-of-type > h2{
+    color: var(--clr-gray);
+    font-size: 1rem;
+}
+.container-education > div:nth-of-type(2) > h3{
+    color: var(--clr-gray);
+    font-size: 1rem;
+}
+
+.container-education > div:nth-of-type(3) > h4{
+    color: var(--clr-gray);
+    font-size: 1rem;
+}
+.container-education > div > p:first-of-type{
+    color: var(--clr-navy);
+}
+/* responsive work-experience-area heading and paragraph for smallest device */
+@media screen and (max-width:400px){
+    .work-experience-area > .front-end-area >  h2{
+        font-size: 0.8rem; 
+    }
+    .work-experience-area > .web-developer-area > h3{
+        font-size: 0.8rem;
+    }
+    .work-experience-area > div > p{
+        font-size: 0.7rem;
+    }
+}
+/* footer style start here */
+footer{
+    text-align: center;
+    background-color:gray;
+    padding: 1rem;
+}
+footer >  section  > div > ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > section > div > ul li{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+footer > section > h1, h2{
+    font-size: 1rem;
+}
+@media screen and (min-width:500px){
+    footer > section > div >  ul li{
+        font-size: 2rem;
+    }
+}
+/* here style for desktop and large device , tablate */
+@media screen and (min-width:750px){
+    main {
+        display: flex;
+    }
+    
+}
