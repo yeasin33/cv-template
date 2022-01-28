@@ -11,6 +11,8 @@ body{
     --clr-white:#ffffff;
     --clr-white-smoke:#f5f5f5;
     --clr-gray:#696969;
+    --clr-navy:#000080;
+    --margin-05rem:0.5rem;
 }
 /* in web page every ul li list style type */
 ul{
@@ -35,17 +37,17 @@ ul li{
     top: 85%;
     left: 30px;
     color: var(--clr-white);
-    font: normal smaller bold 1.4rem 'Courier New', Courier, monospace;
+    font: normal  bold 1.2rem 'Courier New', Courier, monospace;
 }
 .person-contact-address > ul li{
-    color:#696969;
+    color:var(--clr-gray);
     line-height:1.3rem;
 }
 .person-contact-address ul li::before{
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
-    margin: 0.5rem;
-    color: 	#000080;
+    margin: var(--margin-05rem);
+    color: 	var(--clr-navy);
 }
 .person-contact-address ul li:first-child::before{
     content: '\f0b1';
@@ -58,4 +60,123 @@ ul li{
 }
 .person-contact-address ul li:nth-child(4)::before{
     content: '\f879';
+}
+/*person contact area end here */
+/* person skills area start here */
+.skill-area h2::before{
+    content: '\f0a3';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    color:var(--clr-navy);
+    font-size: 1rem;
+    margin: var(--margin-05rem);
+}
+.skill-area > h2{
+    font: normal  bold 1.3rem/30px Georgia, serif;
+    color: var(--clr-gray);
+}
+/* create skill area progress bar */
+.skill-area ul li{
+    line-height: 60px;
+    position: relative;
+    color: var(--clr-gray);
+    font-size: 1rem;
+    margin: var(--margin-05rem);
+}
+.skill-area > ul li::before{
+    content: '';
+    position: absolute;
+    top: calc(85%);
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: var(--clr-white);
+    border-radius: 5px;
+}
+.skill-area > ul li::after{
+    content: '';
+    position: absolute;
+    top: calc(85%);
+    bottom: 0;
+    left: 0%;
+    right:100%;
+    height: 20px;
+    color: red;
+    background-color: var(--clr-navy);
+    border-radius: 5px;
+}
+.skill-area > ul li:first-child::after{
+    content: '';
+    width: 85%;
+}
+.skill-area > ul li:nth-child(2)::after{
+    content: '';
+    width: 80%;
+}
+.skill-area > ul li:nth-child(3)::after{
+    content: '';
+    width: 70%;
+}
+.skill-area > ul li:nth-child(4)::after{
+    content: '';
+    width: 60%;
+}
+/* skill area end here */
+/* language area start here */
+.language-area > h3{
+    margin-top: 1rem;
+    font: normal  bold 1.3rem/30px Georgia, serif;
+    color: var(--clr-gray);
+    margin-left: var(--margin-05rem);
+}
+.language-area > h3::before{
+    content: '\f57d';
+    font-family: 'Font Awesome 5 free';
+    font-weight: bold;
+    margin-right: var(--margin-05rem);
+    color: var(--clr-navy);
+}
+.language-area ul li{
+    line-height: 60px;
+    position: relative;
+    color: var(--clr-gray);
+    font-size: 1rem;
+    margin: var(--margin-05rem);
+}
+.language-area > ul li::before{
+    content: '';
+    position: absolute;
+    top: calc(85%);
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: var(--clr-white);
+    border-radius: 5px;
+}
+.language-area > ul li::after{
+    content: '';
+    position: absolute;
+    top: calc(85%);
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    height: 20px;
+    background-color: var(--clr-navy);
+    border-radius: 5px;
+}
+.language-area > ul li:first-child::after{
+    content: '';
+    width: 90%;
+}
+.language-area > ul li:nth-child(2)::after{
+    content: '';
+    width: 80%;
+}
+.language-area > ul li:nth-child(3)::after{
+    content: '';
+    width: 50%;
 }
