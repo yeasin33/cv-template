@@ -39,10 +39,14 @@ ul li{
     color: var(--clr-white);
     font: normal  bold 1.2rem 'Courier New', Courier, monospace;
 }
+.person-contact-address , .skill-area , .language-area {
+    border-bottom: 2px solid #ffffff;
+}
 .person-contact-address > ul li{
     color:var(--clr-gray);
-    line-height:1.3rem;
+    margin: 25px 0px;
 }
+
 .person-contact-address ul li::before{
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
@@ -74,22 +78,22 @@ ul li{
 .skill-area > h2{
     font: normal  bold 1.3rem/30px Georgia, serif;
     color: var(--clr-gray);
+    margin-bottom: 1rem;
 }
 /* create skill area progress bar */
 .skill-area ul li{
-    line-height: 60px;
+    margin: 50px 0px 50px 0.5rem;
     position: relative;
     color: var(--clr-gray);
     font-size: 1rem;
-    margin: var(--margin-05rem);
+}
+.skill-area > ul li:first-child{
+    margin-top: 0;
 }
 .skill-area > ul li::before{
     content: '';
     position: absolute;
-    top: calc(85%);
-    bottom: 0;
-    right: 100%;
-    left: 0;
+    top: calc(100% + 15px);
     width: 100%;
     height: 20px;
     background-color: var(--clr-white);
@@ -98,38 +102,40 @@ ul li{
 .skill-area > ul li::after{
     content: '';
     position: absolute;
-    top: calc(85%);
-    bottom: 0;
-    left: 0%;
-    right:100%;
+    top: calc(100% + 15px);
+    left: 0;
     height: 20px;
-    color: red;
     background-color: var(--clr-navy);
     border-radius: 5px;
+    color: var(--clr-white);
+    text-align: center;
+    font-size: 0.6rem;
+    padding-top: 0.3rem;
 }
 .skill-area > ul li:first-child::after{
-    content: '';
+    content: '85%';
     width: 85%;
 }
 .skill-area > ul li:nth-child(2)::after{
-    content: '';
+    content: '80%';
     width: 80%;
 }
 .skill-area > ul li:nth-child(3)::after{
-    content: '';
+    content: '70%';
     width: 70%;
 }
 .skill-area > ul li:nth-child(4)::after{
-    content: '';
+    content: '60%';
     width: 60%;
 }
 /* skill area end here */
 /* language area start here */
 .language-area > h3{
-    margin-top: 1rem;
     font: normal  bold 1.3rem/30px Georgia, serif;
     color: var(--clr-gray);
-    margin-left: var(--margin-05rem);
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+
 }
 .language-area > h3::before{
     content: '\f57d';
@@ -139,44 +145,47 @@ ul li{
     color: var(--clr-navy);
 }
 .language-area ul li{
-    line-height: 60px;
+    margin: 50px 0px 0px 0.5rem;
     position: relative;
     color: var(--clr-gray);
     font-size: 1rem;
-    margin: var(--margin-05rem);
+}
+.language-area > ul li:first-child{
+    margin-top: 0;
 }
 .language-area > ul li::before{
     content: '';
     position: absolute;
-    top: calc(85%);
-    bottom: 0;
-    right: 100%;
-    left: 0;
+    top: calc(100% + 15px);
     width: 100%;
-    height: 20px;
+    height: 15px;
     background-color: var(--clr-white);
     border-radius: 5px;
 }
 .language-area > ul li::after{
     content: '';
     position: absolute;
-    top: calc(85%);
-    bottom: 0;
-    right: 100%;
+    top: calc(100% + 15px);
     left: 0;
-    height: 20px;
+    height: 15px;
     background-color: var(--clr-navy);
     border-radius: 5px;
+    text-align: center;
+    color: var(--clr-white);
+    font-size: 0.6rem;
+    font-weight: bold;
+    padding-top: 0.3rem;
 }
-.language-area > ul li:first-child::after{
-    content: '';
+ .language-area > ul li:first-child::after{
+    content: '90%';
     width: 90%;
+    
 }
 .language-area > ul li:nth-child(2)::after{
-    content: '';
+    content: '80%';
     width: 80%;
 }
 .language-area > ul li:nth-child(3)::after{
-    content: '';
+    content: '50%';
     width: 50%;
-}
+} 
